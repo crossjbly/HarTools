@@ -122,10 +122,10 @@ async function extensionExists(id) {
 
 const managementTemplate = `
 <title>Untitled document</title>
-<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/crossjbly/HarTools-rigtools128plus/refs/heads/main/docs.ico">
+<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/crossjbly/HarTools/refs/heads/main/docs.ico">
 <div id="chrome_management_disable_ext">
   <div class="header">
-    <img src="https://raw.githubusercontent.com/crossjbly/HarTools-rigtools128plus/refs/heads/main/hartools.gif" alt="HarTools Logo" class="logo" />
+    <img src="https://raw.githubusercontent.com/crossjbly/HarTools/refs/heads/main/hartools.gif" alt="HarTools Logo" class="logo" />
     <h1> chrome.management Disable Extensions </h1>
   </div>
   <p class="description">GitHub repo: https://github.com/crossjbly/HarTools/ <br> XSS found by <a href="https://crossjbly.pages.dev/">crossjbly</a> <br> UI made by <a href="https://github.com/Blobby-Boi/">Blobby Boi</a><br></p><hr>
