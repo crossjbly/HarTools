@@ -6,7 +6,7 @@
 
     //     window.w = w;
     // })
-    const w = window.opener.open("devtools://devtools/bundled/inspector.html");
+    const w = window.opener.open(window.opener.location.origin + window.opener.location.pathname);
     window.opener.close();
     w.addEventListener("load", async () => {
         if (!w.DevToolsAPI) {
