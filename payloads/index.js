@@ -1632,14 +1632,14 @@ onload = async function x() {
             const url = await writeFile(
                 "hartools.html",
                 `${await fetch(
-          "https://raw.githubusercontent.com/crossjbly/HarTools-rigtools128plus/refs/heads/main/payloads/index.html"
+          "https://raw.githubusercontent.com/T3M1N4L/rigtools-updated-ui/refs/heads/main/payloads/index.html"
         ).then((res) => res.text())}<script src="./hartools.js"></script>`
             );
 
             await writeFile(
                 "hartools.js",
                 await fetch(
-                    "https://raw.githubusercontent.com/crossjbly/HarTools-rigtools128plus/refs/heads/main/payloads/index.js"
+                    "https://raw.githubusercontent.comT3M1N4L/rigtools-updated-ui/refs/heads/main/payloads/index.js"
                 ).then((res) => res.text())
             );
 
