@@ -11,7 +11,7 @@ index_html_b64 = read_and_encode("payloads/index.html")
 index_js_b64 = read_and_encode("payloads/index.js")
 
 # Load the xss.js file
-with open("xss.js", "r", encoding="utf-8") as f:
+with open("autoxss.js", "r", encoding="utf-8") as f:
     js_contents = f.read()
 
 # Replace placeholders with base64-encoded strings
