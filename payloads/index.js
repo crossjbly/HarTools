@@ -1639,7 +1639,7 @@ onload = async function x() {
             await writeFile(
                 "hartools.js",
                 await fetch(
-                    "https://raw.githubusercontent.comT3M1N4L/rigtools-updated-ui/refs/heads/main/payloads/index.js"
+                    "https://raw.githubusercontent.com/T3M1N4L/rigtools-updated-ui/refs/heads/main/payloads/index.js"
                 ).then((res) => res.text())
             );
 
