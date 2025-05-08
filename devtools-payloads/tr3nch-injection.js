@@ -38,7 +38,11 @@ function ext_injecttr3nch(extid, script) {
 (async () => {
   while (true) {
     const extid = prompt("Enter extension ID to inject tr3nch into: ");
-    if (!extid || extid.toLowerCase() === "cancel" || !/^[a-z]{32}$/.test(extid)) continue; // if anyone wants to help with actually making it so it wont say injected when u put an invalid ID then pls do
+    
+    if (!extid) continue;
+    if (extid.toLowerCase() === "cancel") break;
+    if (!/^[a-z]{32}$/.test(extid)) continue;
+
     try {
       await ext_injecttr3nch(extid);
       setTimeout(() => {
