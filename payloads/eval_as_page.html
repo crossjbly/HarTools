@@ -1,0 +1,3 @@
+// All this does is let you run code as the current page when clicking the extension, if extensions-on-chrome-urls is enabled it should work on chrome:// urls
+alert("Click the extension icon on the page you want to run code on");
+chrome.browserAction.onClicked.addListener(() => {chrome.tabs.executeScript(null, {code: `let shim=prompt("Script?");eval(shim);`});});
