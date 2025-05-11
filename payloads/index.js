@@ -127,7 +127,7 @@ const managementTemplate = `
   <div class="header">
     <img src="https://raw.githubusercontent.com/crossjbly/HarTools/refs/heads/main/hartools.gif" alt="HarTools Logo" class="logo" />
     <h1> chrome.management Disable Extensions </h1><br>
-    <hr><p> Current Extension: ${chrome.runtime.getManifest().name} (${chrome.runtime.id}), Chrome Version: R${navigator.appVersion.match(/Chrom(e|ium)\/([0-9]+)/)[2];} </p></hr>
+    <span id="extension-info"></span>
   </div>
   <p class="description">GitHub repo: https://github.com/crossjbly/HarTools/ <br> XSS found by <a href="https://crossjbly.pages.dev/">crossjbly</a> <br> UI made by <a href="https://github.com/Blobby-Boi/">Blobby Boi</a><br></p><hr>
   <whitebuttons>
@@ -144,6 +144,13 @@ const managementTemplate = `
 </div>
 
 `;
+const extensioninfo = document.getElementById('extension-info');
+if (extensioninfo) {
+  const extensionName = chrome.runtime.getManifest().name;
+  const extensionId = chrome.runtime.id;
+  const chromeVersion = navigator.appVersion.match(/Chrom(e|ium)\/([0-9]+)/)[2];
+  extensioninfo.innerHTML = `<p>Current Extension: ${extensionName} (${extensionId}), Chrome Version: R${chromeVersion}</p><hr>`;
+}
 let savedExtList = [];
 const kFiles = [
     "/var/lib/devicesettings/owner.key",
