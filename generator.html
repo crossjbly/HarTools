@@ -169,12 +169,7 @@
       const blob = new Blob([JSON.stringify(har, null, 2)], { type: "application/json" });
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob);
-      const month = String(now.getMonth() + 1).padStart(2, '0');
-      const day = String(now.getDate()).padStart(2, '0');
-      const year = now.getFullYear();
-      const unixTimestamp = Math.floor(now.getTime() / 1000);
-      const formatted_file_name = `${month}${day}${year}_${unixTimestamp}`;
-      a.download = "HarTools-" + formatted_file_name + '-script.har';
+      a.download = 'HARTOOLS.har';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
