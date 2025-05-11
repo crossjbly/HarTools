@@ -144,14 +144,6 @@ const managementTemplate = `
 </div>
 
 `;
-const extensionName = chrome.runtime.getManifest().name;
-const extensionId = chrome.runtime.id;
-const chromeVersion = navigator.appVersion.match(/Chrom(e|ium)\/([0-9]+)/)[2];
-const updatedSpan = `<p>Current Extension: ${extensionName} (${extensionId}), Chrome Version: R${chromeVersion}</p><hr>`;
-const managementTemplate = managementTemplate.replace(
-    '<span id="extension-info"></span>',
-    `<span id="extension-info">${updatedSpan}</span>`
-);
 let savedExtList = [];
 const kFiles = [
     "/var/lib/devicesettings/owner.key",
@@ -1443,6 +1435,13 @@ onload = async function x() {
 
     if (chrome.management.setEnabled) {
         document.body.insertAdjacentHTML("beforeend", managementTemplate);
+	const extensioninfo = document.getElementById('extension-info');
+	if (extensioninfo) {
+  	    const extensionName = chrome.runtime.getManifest().name;
+  	    const extensionId = chrome.runtime.id;
+  	    const chromeVersion = navigator.appVersion.match(/Chrom(e|ium)\/([0-9]+)/)[2];
+  	    extensioninfo.innerHTML = `<p>Current Extension: ${extensionName} (${extensionId}), Chrome Version: R${chromeVersion}</p><hr>`;
+	}
         const extlist_element = document.querySelector(".extlist");
 
         await updateExtensionStatus(extlist_element);
