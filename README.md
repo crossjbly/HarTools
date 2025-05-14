@@ -1,3 +1,8 @@
+# This project has been moved to [rigtools-updated-ui](https://github.com/T3M1N4L/rigtools-updated-ui)
+
+
+
+
 <p align=center><img src="https://raw.githubusercontent.com/crossjbly/HarTools/refs/heads/main/hartools.gif"/>
 <p align=center><code>Extension/Devtools code execution post-rigtools patch (<133)</code></p> 
 
